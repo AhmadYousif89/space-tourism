@@ -19,7 +19,7 @@ export const Crew = () => {
 
   return (
     <>
-      <div className="fixed inset-0 -z-10 bg-repeat-x bg-[url(src/assets/crew/background-crew-mobile.jpg)] md:bg-[url(src/assets/crew/background-crew-tablet.jpg)] ws:bg-[url(src/assets/crew/background-crew-desktop.jpg)]">
+      <div className="fixed inset-0 -z-10 bg-repeat-x bg-[url(assets/crew/background-crew-mobile.jpg)] md:bg-[url(assets/crew/background-crew-tablet.jpg)] ws:bg-[url(assets/crew/background-crew-desktop.jpg)]">
         <div
           aria-labelledby="backdrop overlay"
           className="fixed inset-0 bg-dark_blue bg-opacity-50"

@@ -24,7 +24,7 @@ export const Destination = () => {
 
   return (
     <>
-      <div className="fixed inset-0 -z-10 bg-repeat-x bg-[url(src/assets/destination/background-destination-mobile.jpg)] md:bg-[url(src/assets/destination/background-destination-tablet.jpg)] ws:bg-[url(src/assets/destination/background-destination-desktop.jpg)]">
+      <div className="fixed inset-0 -z-10 bg-repeat-x bg-[url(assets/destination/background-destination-mobile.jpg)] md:bg-[url(assets/destination/background-destination-tablet.jpg)] ws:bg-[url(assets/destination/background-destination-desktop.jpg)]">
         <div
           aria-labelledby="backdrop overlay"
           className="fixed inset-0 bg-dark_blue bg-opacity-25"
@@ -48,7 +48,7 @@ export const Destination = () => {
           </figure>
         ))}
 
-        <Article className="pb-0">
+        <Article className="!pb-0">
           <div className="flex items-center justify-center gap-8">
             {data.destinations.map((destiny, idx) => (
               <button

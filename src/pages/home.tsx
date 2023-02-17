@@ -5,7 +5,7 @@ export const Home = () => {
 
   return (
     <>
-      <div className="fixed inset-0 -z-10 bg-no-repeat bg-[url(src/assets/home/background-home-mobile.jpg)] md:bg-[url(src/assets/home/background-home-tablet.jpg)] ws:bg-[url(src/assets/home/background-home-desktop.jpg)]" />
+      <div className="fixed inset-0 -z-10 bg-no-repeat bg-[url(assets/home/background-home-mobile.jpg)] md:bg-[url(assets/home/background-home-tablet.jpg)] ws:bg-[url(assets/home/background-home-desktop.jpg)]" />
 
       <section className="pt-40 flex flex-col items-center justify-between gap-[3.2rem]">
         <div className="w-[32.7rem] space-y-[1.6rem]">

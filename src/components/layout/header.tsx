@@ -16,7 +16,7 @@ export const Header: FC<PropsWithChildren<NavigationProps>> = ({
       <Link to={{ pathname: '/' }}>
         <img
           className="w-[4rem] h-[4rem]"
-          src="src/assets/icons/logo.svg"
+          src="assets/icons/logo.svg"
           alt="space star logo"
         />
       </Link>
@@ -29,8 +29,8 @@ export const Header: FC<PropsWithChildren<NavigationProps>> = ({
           e.stopPropagation();
           setToggleMenu(pv => !pv);
         }}>
-        {!toggleMenu && <img src="src/assets/icons/icon-hamburger.svg" alt="menu icon" />}
-        {toggleMenu && <img src="src/assets/icons/icon-close.svg" alt="menu icon" />}
+        {!toggleMenu && <img src="assets/icons/icon-hamburger.svg" alt="menu icon" />}
+        {toggleMenu && <img src="assets/icons/icon-close.svg" alt="menu icon" />}
       </button>
 
       {children}
