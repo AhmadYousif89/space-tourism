@@ -24,7 +24,7 @@ export const Destination = () => {
 
   return (
     <>
-      <div className="fixed inset-0 -z-10 bg-repeat-x bg-[url(assets/destination/background-destination-mobile.jpg)] md:bg-[url(assets/destination/background-destination-tablet.jpg)] ws:bg-[url(assets/destination/background-destination-desktop.jpg)]">
+      <div className="fixed inset-0 -z-10 bg-repeat-x bg-[url(/public/assets/destination/background-destination-mobile.jpg)] md:bg-[url(/public/assets/destination/background-destination-tablet.jpg)] ws:bg-[url(/public/assets/destination/background-destination-desktop.jpg)]">
         <div
           aria-labelledby="backdrop overlay"
           className="fixed inset-0 bg-dark_blue bg-opacity-25"

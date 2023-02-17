@@ -20,7 +20,7 @@ export const Technology = () => {
 
   return (
     <>
-      <div className="fixed inset-0 -z-10 bg-repeat-x bg-[url(assets/technology/background-technology-mobile.jpg)] md:bg-[url(assets/technology/background-technology-tablet.jpg)] ws:bg-[url(assets/technology/background-technology-desktop.jpg)]">
+      <div className="fixed inset-0 -z-10 bg-repeat-x bg-[url(/public/assets/technology/background-technology-mobile.jpg)] md:bg-[url(/public/assets/technology/background-technology-tablet.jpg)] ws:bg-[url(/public/assets/technology/background-technology-desktop.jpg)]">
         <div
           aria-labelledby="backdrop overlay"
           className="fixed inset-0 bg-dark_blue bg-opacity-25"
