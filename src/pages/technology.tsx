@@ -29,7 +29,7 @@ export const Technology = () => {
 
       <Section
         header={['03', 'space launch 101']}
-        className="md:gap-[6rem] ws:w-[128rem] ws:ml-auto ws:mx-0 ws:justify-items-stretch">
+        className="ws:gap-y-4 ws:w-[128rem] ws:ml-auto ws:mx-0 ws:justify-items-stretch">
         {[data.technology[techNumber]].map(tech => (
           <figure
             key={tech.name}

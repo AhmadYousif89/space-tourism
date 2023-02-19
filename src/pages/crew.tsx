@@ -41,7 +41,7 @@ export const Crew = () => {
           </figure>
         ))}
 
-        <Article className="row-start-3 col-start-1 md:flex-col-reverse md:row-start-2 md:max-w-[57rem] ws:h-full ws:justify-evenly ws:items-start ws:text-left">
+        <Article className="row-start-3 col-start-1 md:flex-col-reverse md:row-start-2 md:max-w-[57rem] ws:h-full ws:justify-around ws:items-start ws:text-left">
           <div className="flex items-center justify-center gap-6">
             {data.crew.map((crew, idx) => (
               <button
