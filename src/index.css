@@ -25,7 +25,7 @@
     @apply font-bellefair text-[2.4rem] leading-[5.75rem] md:text-[4rem] ws:text-[5.6rem];
   }
   .h4 {
-    @apply font-bellefair text-[1.6rem] ws:text-[3.2rem];
+    @apply font-bellefair text-[1.6rem] md:text-[3.2rem] tracking-[2px] leading-[3.7rem];
   }
   .h5 {
     @apply font-barlow_condensed text-white uppercase text-[1.6rem] leading-[1.125] tracking-[.27rem] md:text-[2rem] md:tracking-[.385rem] ws:text-[2.8rem] ws:tracking-[.475rem];
@@ -48,7 +48,7 @@
   }
 
   .explore-btn {
-    @apply h4 w-[15rem] h-[15rem] md:w-[24.2rem] md:h-[24.2rem] ws:w-[27.4rem] ws:h-[27.4rem] font-bellefair text-dark_blue text-center uppercase rounded-full bg-white outline-none focus-visible:outline-2 focus-visible:outline-medium_gray after:absolute after:inset-0 after:w-full after:h-full after:rounded-full after:-z-10 after:bg-white after:bg-opacity-20 hover:after:scale-150 after:transition-transform after:duration-500;
+    @apply h4 w-[15rem] h-[15rem] md:w-[24.2rem] md:h-[24.2rem] ws:w-[27.4rem] ws:h-[27.4rem] text-dark_blue text-center uppercase rounded-full bg-white outline-none focus-visible:outline-2 focus-visible:outline-medium_gray after:absolute after:inset-0 after:w-full after:h-full after:rounded-full after:-z-10 after:bg-white after:bg-opacity-20 hover:after:scale-150 after:transition-transform after:duration-500;
   }
   .gallary-btn {
     @apply w-16 h-16 md:w-24 md:h-24 ws:w-32 ws:h-32 rounded-full text-center text-white outline-1 outline-white hover:outline-1 focus:outline-none focus-visible:outline-1 aria-pressed:bg-white aria-pressed:text-dark_blue;

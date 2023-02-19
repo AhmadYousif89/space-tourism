@@ -20,7 +20,7 @@ export const Technology = () => {
 
   return (
     <>
-      <div className="fixed inset-0 -z-10 bg-repeat-x bg-[url(/public/assets/technology/background-technology-mobile.jpg)] md:bg-[url(/public/assets/technology/background-technology-tablet.jpg)] ws:bg-[url(/public/assets/technology/background-technology-desktop.jpg)]">
+      <div className="fixed inset-0 bg-cover -z-10 bg-[url(/public/assets/technology/background-technology-mobile.jpg)] md:bg-[url(/public/assets/technology/background-technology-tablet.jpg)] ws:bg-[url(/public/assets/technology/background-technology-desktop.jpg)]">
         <div
           aria-labelledby="backdrop overlay"
           className="fixed inset-0 bg-dark_blue bg-opacity-25"
@@ -36,14 +36,14 @@ export const Technology = () => {
             className="row-start-2 col-start-1 flex ws:col-start-2 ws:justify-end">
             <img className="ws:hidden" src={tech.images.landscape} alt={`${tech.name}`} />
             <img
-              className="hidden ws:block h-fit"
+              className="hidden h-fit ws:block"
               src={tech.images.portrait}
               alt={`${tech.name}`}
             />
           </figure>
         ))}
 
-        <Article className="md:gap-[6rem] md:pb-20 ws:flex-row ws:items-center ws:text-left">
+        <Article className="md:pb-20 ws:flex-row ws:gap-32 ws:items-center ws:text-left">
           <div className="flex items-center justify-center gap-6 md:gap-12 ws:flex-col">
             {data.technology.map((tech, idx) => (
               <button
@@ -59,10 +59,10 @@ export const Technology = () => {
 
           {[data.technology[techNumber]].map(tech => (
             <div key={tech.name} className="flex flex-col gap-4 md:max-w-[57rem] mx-auto">
-              <h4 className="h4 uppercase font-barlow_condensed tracking-widest text-light_blue ws:text-2xl">
+              <h4 className="subHeading-2 uppercase text-light_blue ws:text-2xl">
                 the terminology ...
               </h4>
-              <h3 className="h3 uppercase">{tech.name}</h3>
+              <h3 className="h3 uppercase ws:mb-4">{tech.name}</h3>
               <p className="body-text">{tech.description}</p>
             </div>
           ))}

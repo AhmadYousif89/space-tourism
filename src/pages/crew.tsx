@@ -20,7 +20,7 @@ export const Crew = () => {
 
   return (
     <>
-      <div className="fixed inset-0 -z-10 bg-repeat-x bg-[url(/public/assets/crew/background-crew-mobile.jpg)] md:bg-[url(/public/assets/crew/background-crew-tablet.jpg)] ws:bg-[url(/public/assets/crew/background-crew-desktop.jpg)]">
+      <div className="fixed inset-0 -z-10 bg-cover bg-[url(/public/assets/crew/background-crew-mobile.jpg)] md:bg-[url(/public/assets/crew/background-crew-tablet.jpg)] ws:bg-[url(/public/assets/crew/background-crew-desktop.jpg)]">
         <div
           aria-labelledby="backdrop overlay"
           className="fixed inset-0 bg-dark_blue bg-opacity-50"
@@ -33,7 +33,7 @@ export const Crew = () => {
             key={crew.name}
             className="row-start-2 col-start-1 border-b border-white border-opacity-10 flex justify-center w-[32.7rem] md:w-full md:border-0 md:row-start-3 ws:row-start-2 ws:col-start-2">
             <img
-              className="h-[22.3rem] md:h-[53.2rem] object-cover ws:h-full"
+              className="h-[22.3rem] md:h-[53.2rem]"
               src={crew.images.webp}
               alt={`${crew.role} ${crew.name}`}
               srcSet={`${crew.images.webp}, ${crew.images.png}`}
@@ -41,7 +41,7 @@ export const Crew = () => {
           </figure>
         ))}
 
-        <Article className="row-start-3 col-start-1 md:flex-col-reverse md:row-start-2 md:max-w-[57rem] ws:h-full ws:justify-around ws:items-start ws:text-left">
+        <Article className="row-start-3 col-start-1 md:flex-col-reverse md:row-start-2 md:max-w-[55rem] ws:justify-around ws:items-start ws:text-left">
           <div className="flex items-center justify-center gap-6">
             {data.crew.map((crew, idx) => (
               <button
@@ -56,7 +56,9 @@ export const Crew = () => {
 
           {[data.crew[crewNumber]].map(crew => (
             <div key={crew.name}>
-              <h4 className="h4 uppercase opacity-50 ws:mb-2">{crew.role}</h4>
+              <h4 className="h4 uppercase opacity-50 md:text-3xl ws:text-4xl ws:mb-2">
+                {crew.role}
+              </h4>
               <h3 className="h3 uppercase mb-4">{crew.name}</h3>
               <p className="body-text">{crew.bio}</p>
             </div>

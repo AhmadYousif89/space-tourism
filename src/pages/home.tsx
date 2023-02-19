@@ -5,7 +5,7 @@ export const Home = () => {
 
   return (
     <>
-      <div className="fixed inset-0 -z-10 bg-no-repeat bg-[url(/public/assets/home/background-home-mobile.jpg)] md:bg-[url(/public/assets/home/background-home-tablet.jpg)] ws:bg-[url(/public/assets/home/background-home-desktop.jpg)]" />
+      <div className="fixed inset-0 bg-cover -z-10 bg-[url(/public/assets/home/background-home-mobile.jpg)] md:bg-[url(/public/assets/home/background-home-tablet.jpg)] ws:bg-[url(/public/assets/home/background-home-desktop.jpg)]" />
 
       <section className="pt-40 flex flex-col items-center gap-[3.2rem] md:pt-80 ws:pt-[37.7rem] ws:flex-row ws:justify-center ws:gap-[38rem]">
         <div className="w-[32.7rem] text-center md:w-[45rem] space-y-[1.6rem] ws:text-left">
@@ -21,7 +21,7 @@ export const Home = () => {
         <button
           onClick={() => navigate('/destination')}
           className="relative explore-btn mt-24 md:mt-44 ws:mt-48">
-          <span className="text-3xl md:text-5xl">explore</span>
+          <span>explore</span>
         </button>
       </section>
     </>
