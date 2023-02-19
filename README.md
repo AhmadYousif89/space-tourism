@@ -41,7 +41,7 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 ### Links
 
 - Solution URL: [GitHub code](https://github.com/AhmadYousif89/space-tourism)
-- Live Site URL: [Website on vercel](https://s-t.vercel.app)
+- Live Site URL: [Website on vercel](https://into-space.vercel.app/)
 
 ### Built with
 
