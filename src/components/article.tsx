@@ -6,7 +6,7 @@ export const Article: FC<PropsWithChildren<{ className?: string }>> = ({
 }) => {
   return (
     <article
-      className={`${className} flex flex-col gap-12 pb-20 w-[32.7rem] text-white text-center`}>
+      className={`${className} flex flex-col gap-12 text-white text-center max-md:w-[32.7rem]`}>
       {children}
     </article>
   );

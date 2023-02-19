@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import data from '../../data.json';
-import { Article } from '../components/layout/article';
-import { Section } from '../components/layout/section';
+import { Article } from '../components/article';
+import { Section } from '../components/section';
 
 export const Destination = () => {
   const [destinyNumber, setDestinyNumber] = useState(0);
@@ -31,24 +31,19 @@ export const Destination = () => {
         />
       </div>
 
-      <Section>
-        <h5 className="h5 w-full text-center space-x-6">
-          <span className="font-bold opacity-25">01</span>
-          <span>pick your destination</span>
-        </h5>
-
+      <Section header={['01', 'pick your destination']}>
         {[data.destinations[destinyNumber]].map(destiny => (
-          <figure key={destiny.name}>
+          <figure key={destiny.name} className="row-start-2 col-start-1">
             <img
-              className="h-[17rem]"
               src={destiny.images.webp}
               alt={`destination ${destiny.name}`}
+              className="h-[17rem] mx-auto md:h-[30rem] ws:h-[44.5rem]"
               srcSet={`${destiny.images.webp}, ${destiny.images.png}`}
             />
           </figure>
         ))}
 
-        <Article className="!pb-0">
+        <Article className="md:pb-20 ws:items-start ws:w-[44.5rem]">
           <div className="flex items-center justify-center gap-8">
             {data.destinations.map((destiny, idx) => (
               <button
@@ -65,25 +60,27 @@ export const Destination = () => {
           {[data.destinations[destinyNumber]].map(destiny => (
             <div
               key={destiny.name}
-              className="border-b-2 border-white border-opacity-10 pb-12">
+              className="border-b-2 border-white border-opacity-10 pb-12 mx-auto md:w-[45rem] ws:text-left">
               <h2 className="h2 uppercase">{destiny.name}</h2>
               <p className="body-text">{destiny.description}</p>
             </div>
           ))}
-        </Article>
 
-        {[data.destinations[destinyNumber]].map(destiny => (
-          <Article key={destiny.name} className="uppercase">
-            <pre>
-              <p className="subHeading-2 text-light_blue">avg.distance</p>
-              <p className="subHeading-1">{destiny.distance}</p>
-            </pre>
-            <pre>
-              <p className="subHeading-2 text-light_blue">est.travel time</p>
-              <p className="subHeading-1">{destiny.travel}</p>
-            </pre>
-          </Article>
-        ))}
+          {[data.destinations[destinyNumber]].map(destiny => (
+            <div
+              key={destiny.name}
+              className="flex flex-col gap-y-10 gap-x-32 justify-center items-center uppercase md:flex-row ws:text-left">
+              <pre className="space-y-4">
+                <p className="subHeading-2 text-light_blue">avg.distance</p>
+                <p className="subHeading-1">{destiny.distance}</p>
+              </pre>
+              <pre className="space-y-4">
+                <p className="subHeading-2 text-light_blue">est.travel time</p>
+                <p className="subHeading-1">{destiny.travel}</p>
+              </pre>
+            </div>
+          ))}
+        </Article>
       </Section>
     </>
   );

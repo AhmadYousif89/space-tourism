@@ -12,7 +12,7 @@ export const Header: FC<PropsWithChildren<NavigationProps>> = ({
   setToggleMenu,
 }) => {
   return (
-    <header className="absolute z-50 pt-[2.4rem] px-[2.4rem] w-full flex items-center justify-between md:hidden">
+    <header className="absolute z-50 pt-[2.4rem] px-[2.4rem] w-full flex items-center justify-between md:p-0 md:pl-[3.9rem]">
       <Link to={{ pathname: '/' }}>
         <img
           className="w-[4rem] h-[4rem]"
@@ -22,7 +22,7 @@ export const Header: FC<PropsWithChildren<NavigationProps>> = ({
       </Link>
 
       <button
-        className="peer z-50"
+        className="peer z-50 md:hidden"
         aria-expanded={toggleMenu}
         aria-controls={'navigation-menu'}
         onClick={e => {

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import data from '../../data.json';
-import { Article } from '../components/layout/article';
+import { Article } from '../components/article';
+import { Section } from '../components/section';
 
 export const Crew = () => {
   const [crewNumber, setCrewNumber] = useState(0);
@@ -26,18 +27,13 @@ export const Crew = () => {
         />
       </div>
 
-      <section className="h-[100svh] pt-40 [&>*]:w-[32.7rem] flex flex-col items-center gap-[3.2rem]">
-        <h5 className="h5 w-full text-center space-x-6">
-          <span className="font-bold opacity-25">02</span>
-          <span>meet your crew</span>
-        </h5>
-
+      <Section header={['02', 'meet your crew']} className="">
         {[data.crew[crewNumber]].map(crew => (
           <figure
             key={crew.name}
-            className="border-b border-white border-opacity-10 flex items-center justify-center">
+            className="row-start-2 col-start-1 border-b border-white border-opacity-10 flex justify-center w-[32.7rem] md:w-full md:border-0 md:row-start-3 ws:row-start-2 ws:col-start-2">
             <img
-              className="h-[22.2rem]"
+              className="h-[22.3rem] md:h-[53.2rem] object-cover ws:h-full"
               src={crew.images.webp}
               alt={`${crew.role} ${crew.name}`}
               srcSet={`${crew.images.webp}, ${crew.images.png}`}
@@ -45,7 +41,7 @@ export const Crew = () => {
           </figure>
         ))}
 
-        <Article>
+        <Article className="row-start-3 col-start-1 md:flex-col-reverse md:row-start-2 md:max-w-[57rem] ws:h-full ws:justify-evenly ws:items-start ws:text-left">
           <div className="flex items-center justify-center gap-6">
             {data.crew.map((crew, idx) => (
               <button
@@ -60,13 +56,13 @@ export const Crew = () => {
 
           {[data.crew[crewNumber]].map(crew => (
             <div key={crew.name}>
-              <h4 className="h4 uppercase opacity-50">{crew.role}</h4>
-              <h3 className="h3 uppercase">{crew.name}</h3>
+              <h4 className="h4 uppercase opacity-50 ws:mb-2">{crew.role}</h4>
+              <h3 className="h3 uppercase mb-4">{crew.name}</h3>
               <p className="body-text">{crew.bio}</p>
             </div>
           ))}
         </Article>
-      </section>
+      </Section>
     </>
   );
 };

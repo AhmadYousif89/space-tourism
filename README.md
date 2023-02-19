@@ -38,6 +38,42 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 ![technology-1](./public/screenshots/mobile/technology-1.png)
 ![technology-2](./public/screenshots/mobile/technology-2.png)
 
+#### Tablet View
+
+##### Home Page
+
+![home](./public/screenshots/tablet/home.png)
+
+##### Destination Page
+
+![destination](./public/screenshots/tablet/destination.png)
+
+##### Crew Page
+
+![crew](./public/screenshots/tablet/crew.png)
+
+##### Technology Page
+
+![technology](./public/screenshots/tablet/technology.png)
+
+#### Desktop View
+
+##### Home Page
+
+![home](./public/screenshots/desktop/home.png)
+
+##### Destination Page
+
+![destination](./public/screenshots/desktop/destination.png)
+
+##### Crew Page
+
+![crew](./public/screenshots/desktop/crew.png)
+
+##### Technology Page
+
+![technology](./public/screenshots/desktop/technology.png)
+
 ### Links
 
 - Solution URL: [GitHub code](https://github.com/AhmadYousif89/space-tourism)

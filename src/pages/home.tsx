@@ -7,11 +7,11 @@ export const Home = () => {
     <>
       <div className="fixed inset-0 -z-10 bg-no-repeat bg-[url(/public/assets/home/background-home-mobile.jpg)] md:bg-[url(/public/assets/home/background-home-tablet.jpg)] ws:bg-[url(/public/assets/home/background-home-desktop.jpg)]" />
 
-      <section className="pt-40 flex flex-col items-center justify-between gap-[3.2rem]">
-        <div className="w-[32.7rem] space-y-[1.6rem]">
+      <section className="pt-40 flex flex-col items-center gap-[3.2rem] md:pt-80 ws:pt-[37.7rem] ws:flex-row ws:justify-center ws:gap-[38rem]">
+        <div className="w-[32.7rem] md:w-[45rem] space-y-[1.6rem]">
           <h5 className="h5 text-light_blue text-center">so, you want to travel to</h5>
           <h1 className="h1 text-center">space</h1>
-          <p className="body-text text-center">
+          <p className="body-text text-center md:px-4 ws:text-left">
             Let's face it; if you want to go to space, you might as well genuinely go to
             outer space and not hover kind of on the edge of it. Well sit back, and relax
             because we'll give you a truly out of this world experience!
@@ -20,8 +20,8 @@ export const Home = () => {
 
         <button
           onClick={() => navigate('/destination')}
-          className="relative explore-btn mt-24">
-          <span>explore</span>
+          className="relative explore-btn mt-24 md:mt-44">
+          <span className="text-3xl md:text-5xl">explore</span>
         </button>
       </section>
     </>

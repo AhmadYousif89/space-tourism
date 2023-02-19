@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import data from '../../data.json';
-import { Article } from '../components/layout/article';
-import { Section } from '../components/layout/section';
+import { Article } from '../components/article';
+import { Section } from '../components/section';
 
 export const Technology = () => {
   const [techNumber, setTechNumber] = useState(0);
@@ -27,35 +27,39 @@ export const Technology = () => {
         />
       </div>
 
-      <Section>
-        <h5 className="h5 w-full text-center space-x-6">
-          <span className="font-bold opacity-25">03</span>
-          <span>SPACE LAUNCH 101</span>
-        </h5>
-
+      <Section
+        header={['03', 'space launch 101']}
+        className="md:gap-[6rem] ws:w-[128rem] ws:ml-auto ws:mx-0 ws:justify-items-stretch">
         {[data.technology[techNumber]].map(tech => (
-          <figure key={tech.name}>
-            <img className="h-[17rem]" src={tech.images.landscape} alt={`${tech.name}`} />
+          <figure
+            key={tech.name}
+            className="row-start-2 col-start-1 flex ws:col-start-2 ws:justify-end">
+            <img className="ws:hidden" src={tech.images.landscape} alt={`${tech.name}`} />
+            <img
+              className="hidden ws:block h-fit"
+              src={tech.images.portrait}
+              alt={`${tech.name}`}
+            />
           </figure>
         ))}
 
-        <Article>
-          <div className="flex items-center justify-center gap-6">
+        <Article className="md:gap-[6rem] md:pb-20 ws:flex-row ws:items-center ws:text-left">
+          <div className="flex items-center justify-center gap-6 md:gap-12 ws:flex-col">
             {data.technology.map((tech, idx) => (
               <button
                 key={tech.name}
                 aria-pressed={techNumber === idx}
                 title={tech.name}
                 onClick={() => setTechNumber(idx)}
-                className="w-16 h-16 md:w-24 md:h-24 ws:w-32 ws:h-32 rounded-full font-bellefair text-[1.6rem] text-center text-white outline outline-2 outline-white/25 bg-dark_blue hover:outline-white/50 focus:outline-none focus-visible:outline-white aria-pressed:bg-white aria-pressed:text-dark_blue aria-pressed:outline-none">
+                className="w-16 h-16 md:w-24 md:h-24 ws:w-32 ws:h-32 rounded-full font-bellefair text-[1.6rem] md:text-[2rem] ws:text-[3.2rem] text-center text-white outline outline-2 outline-white/25 bg-dark_blue hover:outline-white/50 focus:outline-none focus-visible:outline-white aria-pressed:bg-white aria-pressed:text-dark_blue aria-pressed:outline-none">
                 {idx + 1}
               </button>
             ))}
           </div>
 
           {[data.technology[techNumber]].map(tech => (
-            <div key={tech.name}>
-              <h4 className="h4 uppercase font-barlow_condensed tracking-widest text-light_blue">
+            <div key={tech.name} className="flex flex-col gap-4 md:max-w-[57rem] mx-auto">
+              <h4 className="h4 uppercase font-barlow_condensed tracking-widest text-light_blue ws:text-2xl">
                 the terminology ...
               </h4>
               <h3 className="h3 uppercase">{tech.name}</h3>
