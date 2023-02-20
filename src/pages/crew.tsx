@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
-import data from '../../data.json';
+
+import { data } from '../data';
+import bg_mob from '../assets/images/crew/background-crew-mobile.jpg';
+import bg_tab from '../assets/images/crew/background-crew-tablet.jpg';
+import bg_desk from '../assets/images/crew/background-crew-desktop.jpg';
+
 import { Article } from '../components/article';
 import { Section } from '../components/section';
 
@@ -20,12 +25,19 @@ export const Crew = () => {
 
   return (
     <>
-      <div className="fixed inset-0 -z-10 bg-cover bg-[url(/public/assets/crew/background-crew-mobile.jpg)] md:bg-[url(/public/assets/crew/background-crew-tablet.jpg)] ws:bg-[url(/public/assets/crew/background-crew-desktop.jpg)]">
+      <picture className="fixed inset-0 -z-10">
         <div
           aria-labelledby="backdrop overlay"
           className="fixed inset-0 bg-dark_blue bg-opacity-50"
         />
-      </div>
+        <img
+          className="w-full h-full"
+          src={bg_mob}
+          srcSet={`${bg_mob} 375w, ${bg_tab} 768w, ${bg_desk} 1440w`}
+          sizes="(min-width: 30vw) 70vw, 100vw"
+          alt="space crew"
+        />
+      </picture>
 
       <Section header={['02', 'meet your crew']} className="">
         {[data.crew[crewNumber]].map(crew => (
@@ -34,14 +46,13 @@ export const Crew = () => {
             className="row-start-2 col-start-1 border-b border-white border-opacity-10 flex justify-center w-[32.7rem] md:w-full md:border-0 md:row-start-3 ws:row-start-2 ws:col-start-2">
             <img
               className="h-[22.3rem] md:h-[53.2rem]"
-              src={crew.images.webp}
               alt={`${crew.role} ${crew.name}`}
               srcSet={`${crew.images.webp}, ${crew.images.png}`}
             />
           </figure>
         ))}
 
-        <Article className="row-start-3 col-start-1 md:flex-col-reverse md:row-start-2 md:max-w-[55rem] ws:justify-around ws:items-start ws:text-left">
+        <Article className="row-start-3 col-start-1 md:flex-col-reverse md:row-start-2 md:max-w-[55rem] ws:justify-around ws:items-start ws:text-left max-md:pb-10">
           <div className="flex items-center justify-center gap-6">
             {data.crew.map((crew, idx) => (
               <button
@@ -49,7 +60,7 @@ export const Crew = () => {
                 aria-pressed={crewNumber === idx}
                 title={`${crew.role} ${crew.name}`}
                 onClick={() => setCrewNumber(idx)}
-                className="w-4 h-4 bg-white opacity-20 rounded-full focus-visible:outline-none focus-visible:outline focus-visible:outline-white focus-visible:opacity-50 hover:opacity-50 aria-pressed:opacity-100"
+                className="w-4 h-4 bg-white opacity-20 rounded-full focus:outline-none focus-visible:outline focus-visible:outline-white focus-visible:opacity-50 hover:opacity-50 aria-pressed:opacity-100"
               />
             ))}
           </div>

@@ -7,7 +7,7 @@ export const Section: FC<
 
   return (
     <section
-      className={`${className} h-screen grid justify-items-center grid-rows-[minmax(50px,100px)_auto_1fr] ws:grid-rows-[minmax(20px,50px)_auto] gap-y-16 pt-40 pb-20 mx-auto md:pt-[21.2rem] ws:gap-y-32 ws:w-[112rem] ws:grid-cols-2 ws:pb-0`}>
+      className={`${className} h-screen grid justify-items-center grid-rows-[minmax(20px,32px)_auto_1fr] ws:grid-rows-[minmax(20px,50px)_auto] gap-y-16 pt-40 pb-20 mx-auto md:pt-[13.7rem] ws:pt-[21.3rem] ws:gap-y-32 ws:w-[112rem] ws:grid-cols-2 ws:pb-0`}>
       <h5 className="h5 space-x-6 row-start-1 col-span-full md:max-ws:pl-16 md:place-self-start">
         <span className="font-bold opacity-25">{titleNum}</span>
         <span>{title}</span>

@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
-import data from '../../data.json';
+
+import { data } from '../data';
+import bg_mob from '../assets/images/technology/background-technology-mobile.jpg';
+import bg_tab from '../assets/images/technology/background-technology-tablet.jpg';
+import bg_desk from '../assets/images/technology/background-technology-desktop.jpg';
+
 import { Article } from '../components/article';
 import { Section } from '../components/section';
 
@@ -20,12 +25,19 @@ export const Technology = () => {
 
   return (
     <>
-      <div className="fixed inset-0 bg-cover -z-10 bg-[url(/public/assets/technology/background-technology-mobile.jpg)] md:bg-[url(/public/assets/technology/background-technology-tablet.jpg)] ws:bg-[url(/public/assets/technology/background-technology-desktop.jpg)]">
+      <picture className="fixed inset-0 -z-10">
         <div
           aria-labelledby="backdrop overlay"
           className="fixed inset-0 bg-dark_blue bg-opacity-25"
         />
-      </div>
+        <img
+          className="w-full h-full"
+          src={bg_mob}
+          srcSet={`${bg_mob} 375w, ${bg_tab} 768w, ${bg_desk} 1440w`}
+          sizes="(min-width: 30vw) 70vw, 100vw"
+          alt="space technologies"
+        />
+      </picture>
 
       <Section
         header={['03', 'space launch 101']}
@@ -58,11 +70,11 @@ export const Technology = () => {
           </div>
 
           {[data.technology[techNumber]].map(tech => (
-            <div key={tech.name} className="flex flex-col gap-4 md:max-w-[57rem] mx-auto">
-              <h4 className="subHeading-2 uppercase text-light_blue ws:text-2xl">
+            <div key={tech.name} className="flex flex-col md:max-w-[57rem] mx-auto">
+              <h4 className="subHeading-2 uppercase text-light_blue ws:mb-4 ws:text-2xl">
                 the terminology ...
               </h4>
-              <h3 className="h3 uppercase ws:mb-4">{tech.name}</h3>
+              <h3 className="h3 uppercase mb-4">{tech.name}</h3>
               <p className="body-text">{tech.description}</p>
             </div>
           ))}
