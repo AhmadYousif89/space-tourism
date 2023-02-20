@@ -41,7 +41,7 @@ export const Technology = () => {
 
       <Section
         header={['03', 'space launch 101']}
-        className="ws:gap-y-4 ws:w-[128rem] ws:ml-auto ws:mx-0 ws:justify-items-stretch">
+        className="ws:gap-y-4 ws:w-[128rem] ws:gap-x-4 ws:ml-auto ws:mx-0 ws:justify-items-stretch">
         {[data.technology[techNumber]].map(tech => (
           <figure
             key={tech.name}
@@ -55,7 +55,7 @@ export const Technology = () => {
           </figure>
         ))}
 
-        <Article className="md:pb-20 ws:flex-row ws:gap-32 ws:items-center ws:text-left">
+        <Article className="md:pb-20 ws:flex-row ws:items-center ws:text-left ws:gap-32">
           <div className="flex items-center justify-center gap-6 md:gap-12 ws:flex-col">
             {data.technology.map((tech, idx) => (
               <button
@@ -70,8 +70,8 @@ export const Technology = () => {
           </div>
 
           {[data.technology[techNumber]].map(tech => (
-            <div key={tech.name} className="flex flex-col md:max-w-[57rem] mx-auto">
-              <h4 className="subHeading-2 uppercase text-light_blue ws:mb-4 ws:text-2xl">
+            <div key={tech.name} className="flex flex-col md:w-[57rem] mx-auto">
+              <h4 className="subHeading-2 uppercase text-light_blue ws:mb-4">
                 the terminology ...
               </h4>
               <h3 className="h3 uppercase mb-4">{tech.name}</h3>
