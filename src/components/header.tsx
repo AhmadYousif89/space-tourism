@@ -16,7 +16,7 @@ export const Header: FC<PropsWithChildren<NavigationProps>> = ({
   setToggleMenu,
 }) => {
   return (
-    <header className="absolute z-50 pt-[2.4rem] px-[2.4rem] w-full flex items-center justify-between md:p-0 md:pl-[3.9rem] ws:pt-16">
+    <header className="absolute z-50 pt-[2.4rem] px-[2.4rem] w-full flex items-center justify-between md:p-0 md:pl-[3.9rem] ws:pt-16 ws:pl-[5.5rem]">
       <Link to={{ pathname: '/' }}>
         <img className="w-[4rem] h-[4rem]" src={logo} alt="space star logo" />
       </Link>

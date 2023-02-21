@@ -65,7 +65,7 @@ export const NavMenu: FC<SideMenuProps> = ({ setToggleMenu }) => {
       ref={sideMenuRef}
       id="navigation-menu"
       className={`relative max-md:fixed peer-aria-expanded:translate-x-0 translate-x-full h-screen w-[25.4rem] right-0 top-0 z-20 bg-gradient-to-b from-dark_blue/10 via-light_blue/5 to-white/10 backdrop-blur-2xl transition-all duration-[var(--duration)] origin-right md:translate-x-0 md:w-[45rem] md:h-[9.6rem] md:flex md:items-center md:justify-center ws:w-[83rem]`}>
-      <div className="hidden absolute top-1/2 -left-[46.5rem] -translate-y-1/2 w-[51.3rem] h-1 bg-white/20 rounded-full ws:block">
+      <div className="hidden absolute top-1/2 -left-[45.1rem] -translate-y-1/2 w-[49.9rem] h-1 bg-white/20 rounded-full ws:block">
         <span
           title="hint"
           ref={hintRef}
