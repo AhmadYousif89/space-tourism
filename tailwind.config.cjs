@@ -18,8 +18,6 @@ module.exports = {
         grayish_blue: '#383B4B',
         dark_blue: '#0b0d17',
       },
-      keyframes: {},
-      animation: {},
     },
   },
   plugins: [],

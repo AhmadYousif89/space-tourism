@@ -14,8 +14,12 @@ export const Technology = () => {
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       const dataLength = data.technology.length - 1;
-      if (e.key === 'ArrowRight') setTechNumber(pv => (pv === dataLength ? 0 : pv + 1));
-      if (e.key === 'ArrowLeft') setTechNumber(pv => (pv === 0 ? dataLength : pv - 1));
+      if (e.key === 'ArrowRight') {
+        setTechNumber(pv => (pv === dataLength ? 0 : pv + 1));
+      }
+      if (e.key === 'ArrowLeft') {
+        setTechNumber(pv => (pv === 0 ? dataLength : pv - 1));
+      }
     };
 
     addEventListener('keydown', handler);
