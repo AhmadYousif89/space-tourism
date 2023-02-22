@@ -66,10 +66,8 @@ export const Crew = () => {
           </div>
 
           {[data.crew[crewNumber]].map(crew => (
-            <div key={crew.name}>
-              <h4 className="h4 uppercase opacity-50 md:text-3xl ws:text-4xl ws:mb-2">
-                {crew.role}
-              </h4>
+            <div key={crew.name} className="animate-slide-down ws:animate-slide-right">
+              <h4 className="h4 uppercase opacity-50 md:text-3xl ws:mb-2">{crew.role}</h4>
               <h3 className="h3 uppercase mb-4">{crew.name}</h3>
               <p className="body-text">{crew.bio}</p>
             </div>

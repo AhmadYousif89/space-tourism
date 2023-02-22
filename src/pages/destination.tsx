@@ -71,7 +71,7 @@ export const Destination = () => {
           {[data.destinations[destinyNumber]].map(destiny => (
             <div
               key={destiny.name}
-              className="border-b-2 border-white border-opacity-10 pb-12 mx-auto md:w-[45rem] ws:text-left">
+              className="border-b-2 border-white border-opacity-10 pb-12 mx-auto animate-slide-down ws:animate-slide-right md:w-[45rem] ws:text-left">
               <h2 className="h2 uppercase">{destiny.name}</h2>
               <p className="body-text">{destiny.description}</p>
             </div>
@@ -80,7 +80,7 @@ export const Destination = () => {
           {[data.destinations[destinyNumber]].map(destiny => (
             <div
               key={destiny.name}
-              className="flex flex-col gap-y-10 gap-x-32 justify-center items-center uppercase md:flex-row ws:text-left">
+              className="flex flex-col gap-y-10 gap-x-32 justify-center items-center uppercase animate-slide-down ws:animate-slide-right md:flex-row ws:text-left">
               <pre className="space-y-4">
                 <p className="subHeading-2 text-light_blue">avg.distance</p>
                 <p className="subHeading-1">{destiny.distance}</p>

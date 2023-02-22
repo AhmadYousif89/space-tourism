@@ -74,7 +74,9 @@ export const Technology = () => {
           </div>
 
           {[data.technology[techNumber]].map(tech => (
-            <div key={tech.name} className="flex flex-col md:w-[57rem] mx-auto">
+            <div
+              key={tech.name}
+              className="flex flex-col md:w-[57rem] mx-auto animate-slide-down ws:animate-slide-right">
               <h4 className="subHeading-2 uppercase text-light_blue ws:mb-4">
                 the terminology ...
               </h4>

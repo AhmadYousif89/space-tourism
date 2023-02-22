@@ -20,7 +20,7 @@ export const Home = () => {
       </picture>
 
       <section className="pt-40 flex flex-col items-center gap-[3.2rem] md:pt-80 ws:pt-[37.7rem] ws:flex-row ws:justify-center ws:gap-[38.6rem]">
-        <div className="w-[32.7rem] text-center md:w-[45rem] space-y-[1.6rem] ws:text-left">
+        <div className="w-[32.7rem] text-center md:w-[45rem] space-y-[1.6rem] animate-slide-down ws:animate-slide-right ws:text-left">
           <h5 className="h5 text-light_blue">so, you want to travel to</h5>
           <h1 className="h1">space</h1>
           <p className="body-text md:px-4">
